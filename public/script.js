@@ -5,11 +5,6 @@ const nomeRegistrar = document.getElementById('nome');
 const btnCadastrar = document.getElementById("btnCadastrar");
 
 
-const formLogin = document.getElementById('form'); 
-const emailLogin = document.getElementById('email');
-const senhaLogin = document.getElementById('senha');
-const btnConfirmar = document.getElementById('btnConfirmar');
-
 const statusDiv = document.getElementById('statusDiv'); 
 
 
