@@ -83,12 +83,58 @@ app.post('/login', (req, res) => {
             }
 
             if (result) {
-                return res.json({ sucesso: true, mensagem: "Login efetuado com sucesso!" });
+                if (result) {
+    return res.json({
+        sucesso: true,
+        mensagem: "Login efetuado com sucesso!",
+        nome: enfermeiro.nome,   
+        email: enfermeiro.email  
+    });
+}
             } else {
                 return res.status(401).json({ sucesso: false, mensagem: "Email ou senha incorretos." });
             }
         });
     });
+});
+app.post("/pacientes", (req, res) => {
+    const p = req.body;
+
+  
+    db.query(
+        `INSERT INTO pacientes
+        (nome, cpf, telefone, enfermeiro_designado, sex_fem, sex_masc, sex_outro,
+         def_auditiva, def_visual, def_motora, def_intelectual)
+         VALUES (?,?,?,?,?,?,?,?,?,?,?)`,
+
+        [
+            p.nome, p.cpf, p.telefone, p.enfermeiro_designado, 
+            p.sex_fem, p.sex_masc, p.sex_outro,
+            p.def_auditiva, p.def_visual, p.def_motora, p.def_intelectual
+        ],
+
+        (err) => {
+            if (err) {
+                console.log(err);
+                return res.status(400).json({ mensagem: "Erro ao inserir paciente." });
+            }
+            res.json({ mensagem: "Paciente cadastrado com sucesso!" });
+        }
+    );
+});
+app.get("/pacientes", (req, res) => {
+    db.query("SELECT * FROM pacientes", (err, results) => {
+        if (err) return res.status(500).json({ mensagem: "Erro ao buscar pacientes." });
+        res.json(results);
+    });
+});
+app.delete("/pacientes/:cpf", (req, res) => {
+    const cpf = req.params.cpf;
+
+    db.query("DELETE FROM pacientes WHERE cpf = ?", [cpf], (err) => {
+        if (err) return res.status(500).json({ mensagem: "Erro ao deletar paciente." });
+        res.json({ mensagem: "Paciente deletado com sucesso!" });
+    });
 });
 
 

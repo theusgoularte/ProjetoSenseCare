@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SenseCare</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h2>Bem-vindo, <span id="nomeLogado"></span>!</h2>
+
+<script>
+document.getElementById("nomeLogado").textContent =
+    localStorage.getItem("enfermeiro_nome");
+</script>
+
+<h3>Cadastrar Paciente</h3>
+
+<form id="formPaciente">
+    Nome: <input type="text" id="nomePaciente"><br>
+    CPF: <input type="text" id="cpfPaciente"><br>
+    Telefone: <input type="text" id="telefonePaciente"><br>
     
+
+
+    <h4>Sexo</h4>
+    <label><input type="checkbox" id="sex_fem"> Feminino</label><br>
+    <label><input type="checkbox" id="sex_masc"> Masculino</label><br>
+    <label><input type="checkbox" id="sex_outro"> Outro</label><br>
+
+    <h4>Deficiências</h4>
+    <label><input type="checkbox" id="def_auditiva"> Auditiva</label><br>
+    <label><input type="checkbox" id="def_visual"> Visual</label><br>
+    <label><input type="checkbox" id="def_motora"> Motora</label><br>
+    <label><input type="checkbox" id="def_intelectual"> Intelectual</label><br>
+
+    <button type="button" onclick="salvarPaciente()">Salvar Paciente</button>
+</form>
+
+<h3>Pacientes Cadastrados</h3>
+<table border="1">
+    <thead>
+        <tr>
+           <th>Nome</th>
+            <th>CPF</th>
+            <th>Telefone</th>      <th>Enfermeiro</th>                <th>Sexo</th>
+            <th>Deficiências</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody id="listaPacientes"></tbody>
+</table>
+
+<script src="paginaPrincipal.js"></script>
+
 </body>
 </html>

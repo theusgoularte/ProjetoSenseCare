@@ -21,7 +21,13 @@ btnConfirmar.addEventListener("click", async (event) => {
         const resultado = await response.json();
 
         if (response.ok) {
+            
             statusDiv.innerHTML = `<p style="color: green;">${resultado.mensagem}</p>`;
+
+            
+            localStorage.setItem("enfermeiro_nome", resultado.nome);
+            localStorage.setItem("enfermeiro_email", resultado.email);
+
             window.location.href = "paginaPrincipal.html";
         } else {
             statusDiv.innerHTML = `<p style="color: red;">${resultado.mensagem}</p>`;

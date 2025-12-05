@@ -1,0 +1,118 @@
+/* Variáveis de Cor (Compactas) */
+:root {
+    --g: #4CAF50; /* Verde Principal */
+    --d: #388E3C; /* Verde Escuro */
+    --b: #F8F8F8; /* Fundo Suave */
+    --w: #FFF;   /* Branco */
+    --t: #333;   /* Texto Escuro */
+}
+
+/* Base e Centralização */
+body {
+    font-family: sans-serif;
+    background-color: var(--b);
+    color: var(--t);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3, h4 {
+    color: var(--d);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Formulários (Card Compacto) */
+form, #formPaciente {
+    background-color: var(--w);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 320px; /* Largura compacta similar ao login */
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+}
+
+/* Inputs (Texto, Senha, Email) */
+input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Checkboxes e Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Botões (Estilo Verde) */
+button {
+    background-color: var(--g);
+    color: var(--w);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: var(--d);
+}
+
+/* Botão de Link (Já tenho uma conta) */
+a button {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto 0;
+}
+
+/* Tabela de Pacientes (Estilo Coeso) */
+table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--w);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+thead th {
+    background-color: var(--d);
+    color: var(--w);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4; /* Linhas Alternadas */
+}
+
+/* Status (Mensagens de Sucesso/Erro) */
+#statusDiv {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    width: 90%;
+    max-width: 320px; /* Alinha com o formulário */
+}

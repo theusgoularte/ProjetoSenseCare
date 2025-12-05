@@ -1,18 +1,35 @@
 # SenseCare - Sistema de Gerenciamento de Pacientes
 
-Este é o repositório do projeto SenseCare, um sistema em desenvolvimento focado em fornecer uma interface de Login e Registro para enfermeiros, que posteriormente será expandida para o gerenciamento e designação de pacientes.
-
-O projeto está atualmente em seu estágio inicial (MVP - Produto Mínimo Viável), focando na configuração da infraestrutura de Frontend, Backend e Banco de Dados.
+Este repositório contém o código-fonte do SenseCare, um sistema Full-Stack projetado para autenticação e gerenciamento de pacientes por enfermeiros. O projeto está completo em seu Produto Mínimo Viável (MVP), abrangendo o ciclo de vida completo do paciente (Criar, Ler e Deletar) e um sistema de autenticação de usuários seguro.
 
 
-## 🎯 Objetivo do Projeto
-O objetivo final do SenseCare é criar uma plataforma onde:
+Com base nas últimas alterações (correção de erros, adição de campos de paciente, estilização CSS), aqui está a versão final e atualizada do seu README.md, refletindo todas as funcionalidades e melhorias implementadas.
 
-1. Enfermeiros possam se cadastrar e fazer login com segurança.
+✨ SenseCare - Sistema de Gerenciamento de Pacientes
+Este repositório contém o código-fonte do SenseCare, um sistema Full-Stack projetado para autenticação e gerenciamento de pacientes por enfermeiros. O projeto está completo em seu Produto Mínimo Viável (MVP), abrangendo o ciclo de vida completo do paciente (Criar, Ler e Deletar) e um sistema de autenticação de usuários seguro.
 
-2. Após o login, o enfermeiro possa visualizar os pacientes que lhe foram designados.
+🎯 Funcionalidades Concluídas (MVP)
+O SenseCare oferece as seguintes funcionalidades principais:
 
-3. Implementar funcionalidades CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar os dados dos pacientes.
+1. 🧑‍⚕️ Autenticação de Enfermeiros
+• Registro (Cadastro): Permite que novos enfermeiros se cadastrem com nome, email e senha.
+
+• Login: Permite acesso ao sistema com verificação segura de senha (bcrypt).
+
+• Segurança: As senhas são armazenadas como hashes no banco de dados.
+
+• Estilização: As telas de Login e Cadastro foram estilizadas para um visual compacto e centralizado em verde e branco.
+
+2. 📝 Gerenciamento de Pacientes (CRUD Principal)
+• Criar (Create): Cadastro de novos pacientes, com os seguintes dados:
+
+• Dados demográficos e informações sobre deficiências.
+
+• Inclusão dos campos Número de Telefone e Enfermeiro Designado (automaticamente preenchido pelo usuário logado).
+
+• Ler (Read): Listagem e visualização de todos os pacientes. A tabela foi corrigida para garantir a ordem correta de exibição de todos os campos (Nome, CPF, Telefone, Enfermeiro, Sexo e Deficiências).
+
+• Deletar (Delete): Remoção permanente de um paciente usando o CPF.
 
 ## Tecnologias
 
@@ -20,5 +37,5 @@ O objetivo final do SenseCare é criar uma plataforma onde:
 - Express  
 - MySQL2  
 - XAMPP (MySQL local)  
-- HTML, CSS, JS (frontend em `public/`)  
+- HTML, JS, CSS
 
