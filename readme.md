@@ -38,7 +38,8 @@ Crie o banco de dados chamado sensecare.
 
 Execute as seguintes queries SQL para configurar as tabelas com os campos de telefone e enfermeiro designado:
 
--- Tabela de Autenticação (Enfermeiros)
+ ```
+ -- Tabela de Autenticação (Enfermeiros)
 CREATE TABLE enfermeiros (
     email VARCHAR(255) PRIMARY KEY NOT NULL UNIQUE,
     nome VARCHAR(255) NOT NULL,
@@ -59,20 +60,26 @@ CREATE TABLE pacientes (
     def_motora TINYINT(1) DEFAULT 0,
     def_intelectual TINYINT(1) DEFAULT 0
 );
+```
 
 # 3. Instalação das Dependências
 Na pasta raiz do projeto, instale os módulos Node.js:
 
+```
 npm install express mysql2 cors bcrypt path
+```
 
 # 4. Iniciando a Aplicação
 Execute o servidor Node.js:
 
+```
 node server.js
+```
 
 Acesse a aplicação no navegador:
 
 http://localhost:3000/
+
 ## Tecnologias
 
 - Node.js  
