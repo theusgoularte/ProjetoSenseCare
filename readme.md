@@ -2,12 +2,6 @@
 
 Este repositório contém o código-fonte do SenseCare, um sistema Full-Stack projetado para autenticação e gerenciamento de pacientes por enfermeiros. O projeto está completo em seu Produto Mínimo Viável (MVP), abrangendo o ciclo de vida completo do paciente (Criar, Ler e Deletar) e um sistema de autenticação de usuários seguro.
 
-Com base nas últimas alterações (correção de erros, adição de campos de paciente, estilização CSS), aqui está a versão final e atualizada do seu README.md, refletindo todas as funcionalidades e melhorias implementadas.
-
-## SenseCare - Sistema de Gerenciamento de Pacientes
-
-Este repositório contém o código-fonte do SenseCare, um sistema Full-Stack projetado para autenticação e gerenciamento de pacientes por enfermeiros. O projeto está completo em seu Produto Mínimo Viável (MVP), abrangendo o ciclo de vida completo do paciente (Criar, Ler e Deletar) e um sistema de autenticação de usuários seguro.
-
 ## Funcionalidades Concluídas (MVP)
 O SenseCare oferece as seguintes funcionalidades principais:
 
